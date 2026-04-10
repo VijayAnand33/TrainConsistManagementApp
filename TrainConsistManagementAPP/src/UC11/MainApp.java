@@ -13,16 +13,13 @@ public class MainApp {
         System.out.print("Enter Cargo Code: ");
         String cargoCode = sc.nextLine();
 
-        boolean isTrainValid = RegexValidator.validateTrainID(trainId);
-        boolean isCargoValid = RegexValidator.validateCargoCode(cargoCode);
-
-        if (isTrainValid) {
+        if (RegexValidator.validateTrainID(trainId)) {
             System.out.println("Train ID is VALID");
         } else {
             System.out.println("Train ID is INVALID");
         }
 
-        if (isCargoValid) {
+        if (RegexValidator.validateCargoCode(cargoCode)) {
             System.out.println("Cargo Code is VALID");
         } else {
             System.out.println("Cargo Code is INVALID");
